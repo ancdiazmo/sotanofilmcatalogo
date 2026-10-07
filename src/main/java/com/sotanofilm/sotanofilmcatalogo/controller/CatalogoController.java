@@ -23,11 +23,6 @@ public class CatalogoController {
         this.catalogoService = catalogoService;
     }
 
-    @GetMapping(value = "/obtenerCatalogoXCategorias", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<CategoriaFileSystemDTO> obtenerCatalogoXCategorias () throws Exception {
-        return this.catalogoService.obtenerCatalogoXCategorias();
-    }
-
     @GetMapping(value = "/catalogo", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Path> catalogo () {
         return this.catalogoService.catalogo();
