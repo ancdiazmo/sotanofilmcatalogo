@@ -24,35 +24,9 @@ public class CatalogoPortableController {
         this.catalogoWordService = catalogoWordService;
     }
 
-    /**
-     * Este metodo utiliza ffmpeg, para crear la version portable a partir de una pelicula que se le envia
-     * */
-    @PostMapping(value = "/crearCatalogoPortable720", produces = MediaType.APPLICATION_JSON_VALUE)
-    public void crearCatalogoPortable720 () throws Exception {
-        //this.catalogoPortableService.crearCatalogoPortable720(); validar funcionalidad antes de volver a ejecutar ya que al modelo de datos se le agrego la tabla de rutas
-    }
-
-    /**
-     * Este metodo utiliza ffmpeg, para crear la version portable a partir de una pelicula que se le envia
-     * */
-    @PostMapping(value = "/crearCatalogoPortable480", produces = MediaType.APPLICATION_JSON_VALUE)
-    public void crearCatalogoPortable480 () throws Exception {
-        this.catalogoPortableService.crearCatalogoPortable480();
-    }
-
     @PostMapping(value = "/crearCatalogoWord", produces = MediaType.APPLICATION_JSON_VALUE)
     public void crearCatalogoWord () throws Exception {
         this.catalogoWordService.crearCatalogoWordWrapper();
-    }
-
-    @PostMapping(value = "/organizarNombresNo1080Si720", produces = MediaType.APPLICATION_JSON_VALUE)
-    public void organizarNombresNo1080Si720 () {
-        this.catalogoPortableService.organizarNombresNo1080Si720();
-    }
-
-    @PostMapping(value = "/organizarNombresCatalogoPortable", produces = MediaType.APPLICATION_JSON_VALUE)
-    public void organizarNombresCatalogoPortable () {
-        this.catalogoPortableService.organizarNombresCatalogoPortable();
     }
 
     /**

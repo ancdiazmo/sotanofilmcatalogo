@@ -33,13 +33,13 @@ public class CatalogoController {
         return this.catalogoService.catalogo();
     }
 
-    @GetMapping(value = "/catalogoBajaResolucion", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Integer catalogoBajaResolucion () throws Exception {
+    @GetMapping(value = "/cantidadCatalogoBajaResolucion", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Integer cantidadCatalogoBajaResolucion () throws Exception {
         return this.catalogoService.cantidadCatalogoBajaResolucion();
     }
 
-    @GetMapping(value = "/catalogoAltaResolucion", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Integer catalogoAltaResolucion () throws Exception {
+    @GetMapping(value = "/cantidadCatalogoAltaResolucion", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Integer cantidadCatalogoAltaResolucion () throws Exception {
         return this.catalogoService.cantidadCatalogoAltaResolucion();
     }
 
